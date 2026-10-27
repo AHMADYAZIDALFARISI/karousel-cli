@@ -1,0 +1,30 @@
+[build-system]
+requires = ["setuptools>=61"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "karousel-cli"
+version = "0.1.0"
+description = "Turn a Markdown file into 1080x1350 Instagram carousel PNGs, rendered offline with Pillow."
+readme = "README.md"
+requires-python = ">=3.9"
+license = {text = "MIT"}
+authors = [{name = "Ayasi Open Source Intelligence"}]
+keywords = ["instagram", "carousel", "markdown", "pillow", "cli"]
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: MIT License",
+    "Environment :: Console",
+]
+dependencies = [
+    "Pillow>=10.0",
+]
+
+[project.scripts]
+karousel = "karousel.cli:main"
+
+[project.urls]
+Homepage = "https://github.com/AHMADYAZIDALFARISI/karousel-cli"
+
+[tool.setuptools.packages.find]
+include = ["karousel*"]
